@@ -6,10 +6,12 @@
   "name": "portif-lio",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "devDependencies": {
+    "nodemon": "^3.1.9"
   },
+  "scripts": {
+  "dev": "nodemon server.js"
+},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Agathawei070/Portif-lio.git"
