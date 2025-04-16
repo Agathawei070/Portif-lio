@@ -4,40 +4,236 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title><%= typeof titulo !== 'undefined' ? titulo : 'Meu Portfólio' %></title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .clip-diagonal {
+      clip-path: polygon(0 0, 100% 100%, 100% 100%, 0% 100%);
+    }
+  </style>
 </head>
-<body class="min-h-screen flex flex-col bg-gray-300 text-gray-800">
+<body class="min-h-screen flex flex-col bg-[#0e0e10] text-gray-300">
 
   <%- include('../partials/header') %>
 
-  <main class="flex-1">
-    <section class="text-center py-12 h-full">
-        <h2 class="text-4xl font-bold text-black mb-4">Olá, eu sou a Agatha Wei</h2>
-        <p class="text-lg text-gray-700 max-w-xl mx-auto">
-          Desenvolvedora web apaixonada por transformar ideias em experiências digitais bonitas e funcionais.
-          Aqui você vai encontrar meus projetos, um pouco sobre mim e como entrar em contato. 
-        </p>
-        <div class="mt-8">
-          <a href="/projetos" class="inline-block bg-black text-white px-6 py-3 rounded-full hover:bg-rose-700 transition">
-            Ver Projetos
-          </a>
+  <main class="bg-gradient-to-br from-[#0e0e10] via-[#1f1f23] to-[#0e0e10] text-white font-sans">
+
+    <!-- Introdução -->
+    <section class="w-full py-20 px-8">
+        <div class="max-w-5xl mx-auto flex items-center space-x-8">
+          
+          <!-- Foto Circular -->
+          <div class="w-full h-auto rounded-full overflow-hidden">
+            <img src="/img/eu.jpeg" alt="Agatha" class="w-full h-full object-cover">
+          </div>
+      
+          <!-- Texto -->
+          <div>
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-purple-500">Olá, eu sou Agatha</h1>
+            <p class="text-lg md:text-xl text-gray-300">
+              Sou uma profissional dedicada com objetivos acadêmicos e profissionais voltados para o desenvolvimento tecnológico. Este portfólio foi criado para apresentar meus projetos, conquistas e competências de forma clara e moderna.
+            </p>
+          </div>
+      
         </div>
       </section>
       
-      <section class="py-16 bg-gray-300">
-        <div class="max-w-6xl mx-auto px-4 text-center">
-          <h3 class="text-2xl font-semibold text-gray-800 mb-8">Principais Habilidades</h3>
-          <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <span class="bg-white p-4 rounded shadow text-black font-medium">HTML</span>
-            <span class="bg-white p-4 rounded shadow text-black font-medium">CSS / Tailwind</span>
-            <span class="bg-white p-4 rounded shadow text-black font-medium">JavaScript</span>
-            <span class="bg-white p-4 rounded shadow text-black font-medium">Node.js</span>
+
+    <!-- Separador ondulado -->
+    <div class="w-full overflow-hidden leading-none -mb-1">
+      <svg viewBox="0 0 500 50" preserveAspectRatio="none" class="w-full h-12">
+        <path d="M0,0 C150,50 350,0 500,50 L500,00 L0,0 Z" fill="#1f1f23" />
+      </svg>
+    </div>
+
+    <!-- Currículo -->
+    <section class="w-full py-20 px-8 bg-[#1f1f23]">
+        <div class="max-w-5xl mx-auto">
+          <h2 class="text-4xl font-semibold mb-6 text-cyan-300">Currículo</h2>
+      
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      
+            <!-- Formação e Cursos -->
+            <div>
+                <h3 class="text-2xl font-bold text-purple-500 mb-4">Formação & Cursos</h3>
+                <ul class="space-y-4 text-gray-300">
+                  <li class="flex items-start">
+                    <i class="fas fa-graduation-cap text-lg text-cyan-300 mr-3 mt-1"></i>
+                    <span>
+                      Análise e Desenvolvimento de Sistemas <br>
+                      <span class="text-sm text-gray-400">(Fatec São José dos Campos)</span> <br>
+                        <span class="text-sm text-gray-400">Cursando</span>
+                    </span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-laptop-code text-lg text-cyan-300 mr-3 mt-1"></i>
+                    <span>
+                      Tecnólogo em Informática para Internet <br>
+                      <span class="text-sm text-gray-400">(Etec)</span><br>
+                      <span class="text-sm text-gray-400">Concluido</span>
+                    </span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-book-open text-lg text-cyan-300 mr-3 mt-1"></i>
+                    <span>
+                      Curso de Inglês <br>
+                      <span class="text-sm text-gray-400">(Kumon)</span><br>
+                      <span class="text-sm text-gray-400">Concluido</span>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+              
+            <!-- Competências Técnicas -->
+            <div>
+                <h3 class="text-2xl font-bold text-purple-500 mb-4">Competências Técnicas</h3>
+                <ul class="space-y-4 text-gray-300">
+                  <li class="flex items-center">
+                    <i class="fas fa-code text-lg text-cyan-300 mr-3"></i>
+                    HTML, CSS, JavaScript
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fab fa-react text-lg text-cyan-300 mr-3"></i>
+                    React, Next.js
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fab fa-python text-lg text-cyan-300 mr-3"></i>
+                    Python, Django
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fas fa-database text-lg text-cyan-300 mr-3"></i>
+                    SQL, MongoDB, Firebase
+                  </li>
+                </ul>
+              </div>
+              
+      
+          <!-- Experiência Profissional -->
+          <div class="mt-12">
+            <h3 class="text-2xl font-bold text-purple-500 mb-4">Experiência Profissional</h3>
+            <ul class="space-y-4 text-gray-300">
+              <li>
+                <h4 class="text-xl font-semibold text-cyan-300">Professora – Kumon</h4>
+                <p class="text-sm text-gray-400">Jun 2024 – Nov 2024</p>
+                <p>Desenvolvi habilidades essenciais para a área de tecnologia, como pensamento lógico, resolução de problemas e comunicação clara ao ministrar aulas de Matemática e Inglês. Acompanhei o progresso individual de cada aluno, adaptei abordagens para diferentes perfis e incentivei a autonomia no aprendizado.</p>
+              </li>
+              <li>
+                <h4 class="text-xl font-semibold text-cyan-300">Vendedora – L’Occitane au Brésil</h4>
+                <p class="text-sm text-gray-400">Dez 2024 - Atual</p>
+                <p>Atuação com foco em comunicação interpessoal, negociação e resolução rápida de problemas. Trabalhar com metas e métricas me ensinou a pensar de forma estratégica e orientada a resultados. Desenvolvi também habilidades organizacionais, gerenciamento de tempo e empatia — todas fundamentais para lidar com usuários, clientes e equipes técnicas na área de tecnologia.</p>
+              </li>
+            </ul>
+          </div>
+      
+          <!-- Outras Informações -->
+          <div class="mt-12">
+            <h3 class="text-2xl font-bold text-purple-500 mb-4">Outras Informações</h3>
+            <ul class="space-y-4 text-gray-300">
+              <li class="flex items-center">
+                <i class="fas fa-globe-americas text-lg text-cyan-300 mr-3"></i>
+                Avançada em Inglês e Espanhol
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-robot text-lg text-cyan-300 mr-3"></i>
+                Interesse em Inteligência Artificial e Automação
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-graduation-cap text-lg text-cyan-300 mr-3"></i>
+                Interesse por Aprendizado Contínuo, Comunidades Tech e Desenvolvimento de Carreira em TI
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-laptop-code text-lg text-cyan-300 mr-3"></i>
+                Interesse por Soluções Digitais que Transformam Experiências e Conectam Pessoas
+              </li>
+            </ul>
+          </div>
+          
+      </section>
+
+    <!-- Separador angular -->
+    <div class="w-full h-16 bg-gradient-to-r from-[#1f1f23] to-[#0e0e10] clip-diagonal shadow-lg"></div>
+
+    <!-- Projetos -->
+    <section class="w-full py-20 px-8 bg-[#0e0e10]">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="text-4xl font-semibold mb-6 text-purple-500">Projetos</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-[#1f1f23] p-6 rounded-xl shadow-xl hover:scale-105 transition-transform duration-300">
+            <h3 class="text-xl font-bold text-cyan-300">Projeto EcoTech</h3>
+            <p class="text-gray-300 mt-2">Aplicativo para monitoramento e otimização do consumo de energia. Utiliza React Native e Firebase.</p>
+          </div>
+          <div class="bg-[#1f1f23] p-6 rounded-xl shadow-xl hover:scale-105 transition-transform duration-300">
+            <h3 class="text-xl font-bold text-cyan-300">Dashboard de Exportações</h3>
+            <p class="text-gray-300 mt-2">Plataforma web com gráficos de desempenho de estados brasileiros no comércio exterior. Desenvolvido com Next.js e Tailwind.</p>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
+
+    <!-- Separador ondulado invertido -->
+    <div class="w-full overflow-hidden leading-none -mb-1 rotate-180">
+      <svg viewBox="0 0 500 50" preserveAspectRatio="none" class="w-full h-12">
+        <path d="M0,0 C150,50 350,0 500,50 L500,00 L0,0 Z" fill="#1f1f23" />
+      </svg>
+    </div>
+
+    <!-- Habilidades -->
+    <section class="w-full py-20 px-8 bg-[#1f1f23]">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="text-4xl font-semibold mb-6 text-purple-500">Habilidades</h2>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+          <span class="bg-[#0e0e10] p-3 rounded-lg text-center">JavaScript</span>
+          <span class="bg-[#0e0e10] p-3 rounded-lg text-center">React</span>
+          <span class="bg-[#0e0e10] p-3 rounded-lg text-center">Python</span>
+          <span class="bg-[#0e0e10] p-3 rounded-lg text-center">Comunicação</span>
+          <span class="bg-[#0e0e10] p-3 rounded-lg text-center">Proatividade</span>
+          <span class="bg-[#0e0e10] p-3 rounded-lg text-center">Trabalho em equipe</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Separador angular -->
+    <div class="w-full h-16 bg-gradient-to-r from-[#1f1f23] to-[#0e0e10] clip-diagonal shadow-lg"></div>
+
+    <!-- Trabalhos e Publicações -->
+    <section class="w-full py-20 px-8 bg-[#0e0e10]">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="text-4xl font-semibold mb-6 text-purple-500">Trabalhos e Publicações</h2>
+        <ul class="list-disc list-inside space-y-3">
+          <li>TCC: Análise de Eficiência Energética com Machine Learning</li>
+          <li>Artigo: Visualização de Dados para Tomada de Decisão em Políticas Públicas</li>
+          <li>Relatório: Avaliação de Sistemas Web com Critérios de Usabilidade</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Separador ondulado -->
+    <div class="w-full overflow-hidden leading-none -mb-1">
+      <svg viewBox="0 0 500 50" preserveAspectRatio="none" class="w-full h-12">
+        <path d="M0,0 C150,50 350,0 500,50 L500,00 L0,0 Z" fill="#1f1f23" />
+      </svg>
+    </div>
+
+    <!-- Certificações -->
+    <section class="w-full py-20 px-8 bg-[#1f1f23]">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="text-4xl font-semibold mb-6 text-purple-500">Certificações</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+            <div>
+                <h3 class="text-xl font-semibold text-cyan-300 m-4">Projetos de Sistemas de TI</h3>
+                    <img src="/img/certificado1.png" alt="Certificado 1" class="rounded-lg shadow-lg" />
+            </div>
+
+            <div>
+                <h3 class="text-xl font-semibold text-cyan-300 m-4">Linguagem de Programação Python</h3>
+                    <img src="/img/certificado2.png" alt="Certificado 1" class="rounded-lg shadow-lg" />
+            </div> 
+          
+        </div>
+      </div>
+    </section>
+
+    <%- include('../partials/footer') %>
   </main>
-
-  <%- include('../partials/footer') %>
-
 </body>
 </html>

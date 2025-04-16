@@ -1,0 +1,20 @@
+{
+    "projetos": [
+        {
+        "id": 1,
+        "nome": "Projeto A",
+        "descricao": "Descrição do Projeto A",
+        "data_inicio": "2023-01-01",
+        "data_fim": "2023-06-01",
+        "status": "Em andamento"
+        },
+        {
+        "id": 2,
+        "nome": "Projeto B",
+        "descricao": "Descrição do Projeto B",
+        "data_inicio": "2023-02-01",
+        "data_fim": "2023-07-01",
+        "status": "Concluído"
+        }
+    ]
+}

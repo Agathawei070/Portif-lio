@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title><%= typeof titulo !== 'undefined' ? titulo : 'Meu Portfólio' %></title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .clip-diagonal {
+      clip-path: polygon(0 0, 100% 100%, 100% 100%, 0% 100%);
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col bg-[#0e0e10] text-gray-300">
+
+  <%- include('../partials/header') %>
+
+  <main class="flex-grow bg-gradient-to-br from-[#0e0e10] via-[#1f1f23] to-[#0e0e10] text-white font-sans pt-16 pb-96 ">
+
+    <!-- Cabeçalho da página -->
+    <section class="w-full py-20 px-8">
+      <div class="max-w-5xl mx-auto text-center">
+        <h1 class="text-4xl md:text-5xl font-bold text-purple-500">Currículo</h1>
+        <p class="text-lg mt-4 text-gray-400">
+          Aqui você encontra um resumo da minha trajetória acadêmica, profissional e técnica.
+        </p>
+      </div>
+    </section>
+  
+
+    <!-- Separador angular -->
+    <div class="w-full h-16 bg-gradient-to-r from-[#1f1f23] to-[#0e0e10] clip-diagonal shadow-lg"></div>
+  
+    <section class="w-full py-20 px-8 bg-[#1f1f23]">
+      <div class="max-w-5xl mx-auto space-y-12">
+    
+        <!-- Formação -->
+        <div>
+          <h2 class="text-2xl font-semibold mb-4 text-purple-500">
+            <i class="fas fa-user-graduate mr-2 text-cyan-300"></i>Formação Acadêmica
+          </h2>
+          <ul class="list-disc list-inside space-y-2 text-gray-300">
+            <li>Análise e Desenvolvimento de Sistemas – FATEC São José dos Campos (2023 - Atual)</li>
+            <li>Técnico em Informática para Internet – ETEC (2020 - 2022)</li>
+          </ul>
+        </div>
+    
+        <!-- Cursos -->
+        <div>
+          <h2 class="text-2xl font-semibold mb-4 text-purple-500">
+            <i class="fas fa-book mr-2 text-cyan-300"></i>Cursos Complementares
+          </h2>
+          <ul class="list-disc list-inside space-y-2 text-gray-300">
+            <li>Curso de Inglês – Kumon</li>
+            <li>UX Design & Prototipagem – Figma e Design Thinking</li>
+            <li>Ciência de Dados com Python e Pandas</li>
+          </ul>
+        </div>
+    
+        <!-- Competências Técnicas -->
+        <div>
+          <h2 class="text-2xl font-semibold mb-4 text-purple-500">
+            <i class="fas fa-code mr-2 text-cyan-300"></i>Competências Técnicas
+          </h2>
+          <div class="grid md:grid-cols-2 gap-6 text-gray-300">
+            
+            <div>
+              <h3 class="font-semibold text-cyan-300 mb-2">Frontend</h3>
+              <ul class="list-disc list-inside space-y-1">
+                <li>HTML5, CSS3, JavaScript</li>
+                <li>React, Next.js, Tailwind CSS</li>
+                <li>Responsividade & Acessibilidade (WCAG)</li>
+                <li>Prototipagem com Figma</li>
+              </ul>
+            </div>
+        
+            <div>
+              <h3 class="font-semibold text-cyan-300 mb-2">Backend</h3>
+              <ul class="list-disc list-inside space-y-1">
+                <li>Node.js, Express</li>
+                <li>APIs, Python, Java, JavaScript</li>
+                <li>Arquitetura MVC</li>
+              </ul>
+            </div>
+        
+            <div>
+              <h3 class="font-semibold text-cyan-300 mb-2">Banco de Dados</h3>
+              <ul class="list-disc list-inside space-y-1">
+                <li>MySQL, MongoDB</li>
+                <li>Modelagem relacional e não-relacional</li>
+              </ul>
+            </div>
+        
+            <div>
+              <h3 class="font-semibold text-cyan-300 mb-2">Ferramentas & Extras</h3>
+              <ul class="list-disc list-inside space-y-1">
+                <li>Git, GitHub, Postman</li>
+                <li>VS Code, Sublime</li>
+                <li>Figma, Trello, Notion</li>
+                <li>Automação com npm scripts</li>
+              </ul>
+            </div>
+        
+            <div>
+              <h3 class="font-semibold text-cyan-300 mb-2">Boas Práticas & Metodologias</h3>
+              <ul class="list-disc list-inside space-y-1">
+                <li>Clean Code, Mobile First</li>
+                <li>Scrum, Kanban, Design Thinking</li>
+                <li>Aprendizado por Projeto Integrado (API)</li>
+              </ul>
+            </div>
+            
+          </div>
+        </div>
+        
+    
+        <!-- Experiência -->
+        <div>
+          <h2 class="text-2xl font-semibold mb-4 text-purple-500">
+            <i class="fas fa-briefcase mr-2 text-cyan-300"></i>Experiência Profissional
+          </h2>
+          <ul class="list-disc list-inside space-y-2 text-gray-300">
+            <li>Vendedora - L'Occitane au Brésil (Dez 2024 - Atual)<br><span class="text-sm">Atendimento ao cliente, organização de estoque e uso de sistemas digitais de vendas. A experiência aguçou meu olhar para usabilidade e experiência do usuário.</span></li>
+            <li>Professora - Kumon (Jun 2024 - Nov 2024)<br><span class="text-sm">Aulas de Matemática e Inglês. Trabalhei com lógica, estruturação de raciocínio e acompanhamento de performance — habilidades que se conectam com minha jornada em TI.</span></li>
+          </ul>
+        </div>
+    
+        <!-- Projetos Acadêmicos -->
+        <div>
+          <h2 class="text-2xl font-semibold mb-4 text-purple-500">
+            <i class="fas fa-lightbulb mr-2 text-cyan-300"></i>Projetos Acadêmicos
+          </h2>
+          <ul class="list-disc list-inside space-y-2 text-gray-300">
+            <li>Total Tech: E-commerce Responsivo como TCC do Técnico na ETEC.</li>
+            <li>Mestre Agil: Plataforma educacional interativa e didática que facilite o aprendizado e a implementação da metodologia SCRUM.</li>
+            <li>IdScam: Aplicativo Java Desktop, utilizando modelos de Inteligência Artificial para a extração de informações de documentos de identidade (RG) e postrior armazenamneto e edição em um banco de dados relacional (MySQL). </li>
+          </ul>
+        </div>
+    
+        <!-- Botão de download -->
+        <div class="w-full text-center mt-[100px]">
+          <a 
+            href="/public/doc/curriculo_agathawei.docx" 
+            download 
+            class="inline-flex items-center px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-full shadow-md transition-all duration-300"
+          >
+            <i class="fas fa-download mr-2"></i>
+            Baixar Currículo em PDF
+          </a>
+        </div>
+    
+      </div>
+    </section>
+    
+  </main>
+    <%- include('../partials/footer') %>  
+</body>
+</html>
+

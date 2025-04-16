@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title><%= typeof titulo !== 'undefined' ? titulo : 'Meu Portfólio' %></title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .clip-diagonal {
+      clip-path: polygon(0 0, 100% 100%, 100% 100%, 0% 100%);
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col bg-[#0e0e10] text-gray-300">
+
+  <%- include('partials/header') %>
+
+  <main class="flex-grow bg-gradient-to-br from-[#0e0e10] via-[#1f1f23] to-[#0e0e10] text-white font-sans pt-16 pb-96 px-6">
+    <div class="max-w-7xl mx-auto text-center">
+      <h2 class="text-4xl md:text-5xl font-bold text-purple-500 mb-8">Meus Projetos</h2>
+      <p class="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">Aqui estão alguns dos meus projetos mais recentes. Cada um deles representa uma parte importante da minha jornada como desenvolvedora.</p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+        <!-- Card 1 -->
+        <div class="bg-[#2a2a2f] p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow ">
+          <img src="/img/logo-mestre.png" alt="Mestre Agil" class="w-86 h-64 mx-auto object-cover rounded-xl mb-4">
+          <h3 class="text-2xl font-semibold text-purple-500">Mestre Agil</h3>
+          <p class="text-gray-300 mt-2">Plataforma educacional interativa e didática que facilite o aprendizado e a implementação da metodologia SCRUM. A plataforma visa estar completamente imersa nos valores e pilares do SCRUM, priorizando a entrega de conteúdo ao usuário, aliado a ferramentas padronizadas e métodos avaliativos.</p>
+          <div class="mt-4">
+            <a href="https://github.com/Titus-System/1Semestre-ADS" class="inline-block bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-xl transition" target="_newtab">Ver Detalhes</a>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-[#2a2a2f] p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+          <img src="/img/logo-idscam.png" alt="Id Scam" class="w-86 h-64 mx-auto object-cover rounded-xl mb-4">
+          <h3 class="text-2xl font-semibold text-purple-500">Id Scam</h3>
+          <p class="text-gray-300 mt-2">Aplicativo de processamento de imagens de documentos de identidade, sem o uso de APIs externas e armazenamento desses dados em um banco de dados MySQL local. Foi projetado para facilitar a digitalização, extração e organização de informações contidas em RG, tornando o gerenciamento de dados mais eficiente.</p>
+          <div class="mt-4">
+            <a href="https://github.com/Titus-System/2semestre-ADS" class="inline-block bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-xl transition" target="_newtab">Ver Detalhes</a>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-[#2a2a2f] p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+          <img src="/img/logo-insflow.png" alt="Insight Flow" class=" w-86 h-64 mx-auto object-cover rounded-xl mb-4">
+          <h3 class="text-2xl font-semibold text-purple-500">Insight Flow</h3>
+          <p class="text-gray-300 mt-2">Este projeto visa concentrar dados de comércio exterior no Brasil, fornecendo informações essenciais para profissionais de logística e tomada de decisão.
+            A plataforma oferecerá análises interativas, busca avançada e previsão de tendências para facilitar a compreensão do mercado.</p>
+          <div class="mt-4">
+            <a href="https://github.com/Titus-System/InsightFlow" class="inline-block bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-xl transition" target="_newtab">Ver Detalhes</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <%- include('partials/footer') %>
+</body>
+</html>

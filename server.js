@@ -3,13 +3,15 @@ const path = require('path');
 
 const indexRoutes = require('./routes/index');
 const projetosRoutes = require('./routes/projetos');
+const contatoRoutes = require('./routes/contato');
 
 const app = express();
 const PORT = 3000;
 
 // Configura EJS
-app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
+
 
 // Arquivos estáticos (CSS, imagens)
 app.use(express.static(path.join(__dirname, 'public')));
@@ -18,6 +20,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRoutes);
 app.use('/projetos', projetosRoutes);
 app.use(express.static('public'));
+
+
 
 // Iniciar servidor
 app.listen(PORT, () => {

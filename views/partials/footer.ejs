@@ -1,11 +1,63 @@
-<footer class="bg-black border-t mt-12 text-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col md:flex-row justify-between items-center text-sm">
-      <p>&copy; <%= new Date().getFullYear() %> Agatha. Todos os direitos reservados.</p>
-      <div class="flex space-x-4 mt-2 md:mt-0">
-        <a href="https://github.com/Agathawei070" target="_blank" class="hover:text-yellow-400 transition">GitHub</a>
-        <a href="https://linkedin.com/in/agatha-wei" target="_blank" class="hover:text-yellow-400 transition">LinkedIn</a>
-        <a href="mailto:agatha.wei@gmail.com" class="hover:text-yellow-400 transition">Email</a>
-      </div>
+<footer class="relative bg-[#0e0e10] text-gray-400 border-t border-[#1f1f23]">
+  <!-- Gradiente superior -->
+  <div class="absolute top-0 left-0 w-full h-16 bg-gradient-to-t from-[#0e0e10] via-[#0e0e10]/90 to-transparent"></div>
+
+  <!-- Conteúdo do Footer -->
+  <div class="relative z-10 max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-4 gap-10 text-center md:text-left">
+    
+    <!-- Branding -->
+    <div class="flex flex-col items-center md:items-start">
+      <a href="/">
+        <img src="/img/new-logo.png" alt="Logo" class="h-16 md:h-20 hover:scale-105 transition-transform duration-300">
+      </a>
     </div>
-  </footer>
-  
+
+    <!-- Navegação -->
+    <div class="flex flex-col items-center md:items-start">
+      <h3 class="text-lg font-semibold text-gray-300 mb-4">Navegação</h3>
+      <ul class="space-y-2 text-sm">
+        <li><a href="#projetos" class="hover:text-purple-500 transition">Projetos</a></li>
+        <li><a href="#sobre" class="hover:text-purple-500 transition">Sobre Mim</a></li>
+        <li><a href="#contato" class="hover:text-purple-500 transition">Contato</a></li>
+      </ul>
+    </div>
+
+    <!-- Informações -->
+    <div class="flex flex-col items-center md:items-start">
+      <h3 class="text-lg font-semibold text-gray-300 mb-4">Informações</h3>
+      <ul class="space-y-2 text-sm">
+        <li><span class="text-gray-400">+55 12 98161-3594</span></li>
+        <li><a href="mailto:agatha.wei@gmail.com" class="hover:text-purple-500 transition">agatha.wei@gmail.com</a></li>
+        <li><span class="text-gray-400">São José dos Campos - SP, Brasil</span></li>
+      </ul>
+    </div>
+
+    <!-- Horários -->
+    <div class="flex flex-col items-center md:items-start">
+      <h3 class="text-lg font-semibold text-gray-300 mb-4">Disponibilidade</h3>
+      <ul class="space-y-2 text-sm text-gray-400">
+        <li>Seg - Sex: 7h - 22h</li>
+        <li>Sábado: 8h - 20h</li>
+        <li>Domingos e Feriados: Off</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Rodapé inferior -->
+  <div class="border-t border-[#1f1f23] py-6 text-center text-sm text-gray-500">
+    <p>&copy; <%= new Date().getFullYear() %> <span class="text-cyan-300 font-semibold">Agatha</span>. Todos os direitos reservados.</p>
+    
+    <!-- Redes sociais -->
+    <div class="mt-4 flex justify-center space-x-4 text-cyan-300">
+      <a href="https://github.com/Agathawei070" target="_blank" class="hover:text-purple-500 transition">
+        <i class="fab fa-github text-xl"></i>
+      </a>
+      <a href="https://linkedin.com/in/agatha-wei" target="_blank" class="hover:text-purple-500 transition">
+        <i class="fab fa-linkedin text-xl"></i>
+      </a>
+      <a href="mailto:agatha.wei@gmail.com" class="hover:text-purple-500 transition">
+        <i class="fas fa-envelope text-xl"></i>
+      </a>
+    </div>
+  </div>
+</footer>

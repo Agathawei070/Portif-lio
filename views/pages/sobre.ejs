@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title><%= typeof titulo !== 'undefined' ? titulo : 'Sobre - Agatha' %></title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .clip-diagonal {
+      clip-path: polygon(0 0, 100% 100%, 100% 100%, 0% 100%);
+    }
+    .clip-diagonal-invertido {
+      clip-path: polygon(0 100%, 100% 0, 100% 0, 0% 0);
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col bg-[#0e0e10] text-gray-300">
+
+  <!-- Header -->
+  <%- include('../partials/header') %>
+
+  <!-- Conteúdo principal -->
+  <main class="flex-1 bg-gradient-to-br from-[#0e0e10] via-[#1f1f23] to-[#0e0e10] text-white font-sans pt-16 pb-96">
+
+    <!-- Introdução -->
+    <section class="w-full py-20 px-8">
+      <div class="max-w-5xl mx-auto text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6 text-cyan-300">Sobre Mim</h1>
+        <p class="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto">
+          Sou Agatha, apaixonada por tecnologia, design e inovação. Este espaço foi criado para mostrar não apenas minhas habilidades técnicas, mas também minha trajetória, valores e o que me move como profissional.
+        </p>
+      </div>
+    </section>
+
+
+  
+   <!-- Separador ondulado -->
+   <div class="w-full overflow-hidden leading-none -mb-1">
+    <svg viewBox="0 0 500 50" preserveAspectRatio="none" class="w-full h-12">
+      <path d="M0,0 C150,50 350,0 500,50 L500,00 L0,0 Z" fill="#1f1f23" />
+    </svg>
+  </div>
+
+    <!-- Linha do tempo / trajetória -->
+    <section class="w-full bg-[#1f1f23] py-20 px-8">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="text-3xl font-semibold text-purple-500 mb-8">Minha Jornada</h2>
+        <div class="space-y-10 border-l border-gray-700 pl-6">
+    
+          <div>
+            <h3 class="text-xl text-cyan-300 font-bold">Primeiros Passos</h3>
+            <p class="text-gray-400 mt-2">
+              Meu interesse por programação começou ainda no ensino médio, quando iniciei o curso técnico em Informática para Internet na Etec. Foi ali que desenvolvi meu primeiro projeto relevante: um e-commerce completo como Trabalho de Conclusão de Curso, despertando minha paixão por desenvolvimento web.
+            </p>
+          </div>
+    
+          <div>
+            <h3 class="text-xl text-cyan-300 font-bold">Aprofundando Conhecimentos</h3>
+            <p class="text-gray-400 mt-2">
+              Logo após o técnico, entrei na Fatec São José dos Campos no curso de Análise e Desenvolvimento de Sistemas. Lá, venho participando de projetos desafiadores através do modelo API (Aprendizado por Projeto Integrado), que me permite desenvolver habilidades técnicas e comportamentais a cada semestre.
+            </p>
+          </div>
+    
+          <div>
+            <h3 class="text-xl text-cyan-300 font-bold">Visão de Futuro</h3>
+            <p class="text-gray-400 mt-2">
+              Meu objetivo é ser bem-sucedida fazendo o que amo: desenvolver soluções que impactem positivamente o mundo. Quero utilizar a tecnologia como ferramenta de transformação, criando produtos inovadores, acessíveis e que realmente façam a diferença na vida das pessoas.
+            </p>
+          </div>
+          
+    
+        </div>
+      </div>
+    </section>
+    
+  
+    <!-- Separador angular -->
+    <div class="w-full h-16 bg-gradient-to-r from-[#1f1f23] to-[#0e0e10] clip-diagonal shadow-lg"></div>
+
+
+
+
+    <!-- Interesses -->
+    <section class="w-full py-20 px-8 bg-[#0e0e10]">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="text-3xl font-semibold text-purple-500 mb-6">O que me inspira</h2>
+        <div class="grid md:grid-cols-3 gap-6 text-center">
+    
+          <!-- Aprendizado Contínuo -->
+          <div class="bg-[#1f1f23] p-6 rounded-xl shadow-lg">
+            <div class="flex justify-center mb-4">
+              <i class="fas fa-graduation-cap text-cyan-300 text-4xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-cyan-300 mb-2">Aprendizado Contínuo</h3>
+            <p class="text-gray-400">
+              A cada projeto e desafio, busco me desenvolver como profissional e expandir meu conhecimento técnico.
+            </p>
+          </div>
+    
+          <!-- Tecnologia com Propósito -->
+          <div class="bg-[#1f1f23] p-6 rounded-xl shadow-lg">
+            <div class="flex justify-center mb-4">
+              <i class="fas fa-microchip text-cyan-300 text-4xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-cyan-300 mb-2">Tecnologia com Propósito</h3>
+            <p class="text-gray-400">
+              Quero usar a tecnologia para resolver problemas reais e criar experiências que impactem positivamente a vida das pessoas.
+            </p>
+          </div>
+    
+          <!-- Desafios e Evolução -->
+          <div class="bg-[#1f1f23] p-6 rounded-xl shadow-lg">
+            <div class="flex justify-center mb-4">
+              <i class="fas fa-rocket text-cyan-300 text-4xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-cyan-300 mb-2">Desafios e Evolução</h3>
+            <p class="text-gray-400">
+              Encaro cada novo projeto como uma oportunidade de me superar e contribuir de forma significativa.
+            </p>
+          </div>
+    
+        </div>
+      </div>
+    </section>
+
+    <!-- Separador angular -->
+    <div class="w-full h-16 bg-gradient-to-r from-[#1f1f23] to-[#0e0e10] clip-diagonal shadow-lg"></div>
+
+
+    <!-- Seção Cofundadora - Titus Systems -->
+  <section class="w-full py-24 px-8 bg-gradient-to-br from-[#1f1f23] to-[#0e0e10]">
+   <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-10">
+    
+    <!-- Logo -->
+    <div class="flex-shrink-0 w-64 h-64 rounded-xl bg-[#2a2a2f] p-4 shadow-xl">
+      <!-- Substitua pelo caminho real da sua logo -->
+      <img src="/img/logo-titus.jpg" alt="Logo da Titus Systems" class="w-full h-full object-contain">
+    </div>
+    
+    <!-- Texto -->
+    <div>
+      <h2 class="text-3xl md:text-4xl font-bold text-purple-500 mb-4">Titus Systems</h2>
+      <p class="text-lg text-gray-300">
+        Sou <span class="text-black-300 font-semibold">Co-fundadora da Titus Systems</span>, uma empresa criada inicialmente para fins acadêmicos, dentro do contexto de projetos integradores da faculdade. No entanto, o que começou como um desafio universitário evoluiu para algo muito maior.
+      </p>
+      <p class="text-gray-400 mt-4">
+        A Titus nasceu com propósito: unir tecnologia, inovação e visão estratégica para desenvolver soluções que realmente façam a diferença. Mesmo sendo um projeto acadêmico em sua origem, carregamos o espírito empreendedor, acreditando no potencial de transformar essa ideia em uma referência em soluções digitais no futuro.
+      </p>
+    </div>
+
+    </div>
+  </section>
+  <!-- Separador angular -->
+  <div class="w-full h-16 bg-gradient-to-r from-[#1f1f23] to-[#0e0e10] clip-diagonal shadow-lg"></div>
+
+    
+  </main>
+
+  <!-- Footer -->
+  <%- include('../partials/footer') %>
+</body>
+</html>

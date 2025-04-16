@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title><%= typeof titulo !== 'undefined' ? titulo : 'Meu Portfólio' %></title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .clip-diagonal {
+      clip-path: polygon(0 0, 100% 100%, 100% 100%, 0% 100%);
+    }
+    .clip-diagonal-invertido {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col bg-[#0e0e10] text-gray-300">
+
+  <%- include('../partials/header') %>
+
+  <main class="flex-grow bg-gradient-to-br from-[#0e0e10] via-[#1f1f23] to-[#0e0e10] text-white font-sans pt-16 pb-96 px-6">
+
+    <section class="min-h-screen text-gray-300 px-6 py-16 flex items-center justify-center">
+      <div class="max-w-3xl w-full">
+        <h1 class="text-4xl md:text-5xl font-bold text-purple-500 mb-8 text-center">Fale comigo ✉️</h1>
+
+        <form 
+          action="https://formspree.io/f/mkgjajzy"
+          method="POST"
+          class="bg-[#2a2a2f] rounded-2xl p-8 shadow-xl space-y-6"
+        >
+          <div>
+            <label for="nome" class="block text-sm font-medium mb-1">Nome</label>
+            <input type="text" name="nome" id="nome" required
+                  class="w-full px-4 py-3 rounded-xl bg-[#0e0e10] text-gray-300 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-purple-500" />
+          </div>
+
+          <div>
+            <label for="email" class="block text-sm font-medium mb-1">Email</label>
+            <input type="email" name="email" id="email" required
+                  class="w-full px-4 py-3 rounded-xl bg-[#0e0e10] text-gray-300 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-purple-500" />
+          </div>
+
+          <div>
+            <label for="mensagem" class="block text-sm font-medium mb-1">Mensagem</label>
+            <textarea name="mensagem" id="mensagem" rows="5" required
+                      class="w-full px-4 py-3 rounded-xl bg-[#0e0e10] text-gray-300 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-purple-500"></textarea>
+          </div>
+
+          <button type="submit"
+                  class="w-full bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-6 rounded-xl transition duration-300">
+            Enviar mensagem
+          </button>
+        </form>
+
+        <!-- Informações de Contato -->
+        <div class="mt-12 bg-[#2a2a2f] rounded-2xl p-8 shadow-xl text-center space-y-4">
+          <h2 class="text-2xl font-semibold text-purple-500">Ou entre em contato diretamente:</h2>
+          <p><span class="font-bold">Email:</span> <a href="mailto:agatha.wei@gmail.com" class="text-purple-400 hover:underline" target="_newtab">agatha.wei@gmail.com</a></p>
+          <p><span class="font-bold">Instagram:</span> <a href="https://www.instagram.com/agatha_wei070/" class="text-purple-400 hover:underline" target="_blank">@agatha_wei070</a></p>
+          <p><span class="font-bold">WhatsApp:</span> <a href="https://wa.me/qr/62TP6VSCYOCLC1" class="text-purple-400 hover:underline" target="_blank">(12) 98161-3594</a></p>
+          <p><span class="font-bold">Localização:</span> São José dos Campos - SP</p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <%- include("../partials/footer") %>
+
+</body>
+</html>
