@@ -1,20 +1,49 @@
-<header class="bg-[#0e0e10] shadow-md border-b border-[#1f1f23] text-gray-300">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-      
-      <a href="/">
-        <img src="/img/new-logo.png" alt="Logo" class="h-16 md:h-20 hover:scale-105 transition-transform duration-300">
-      </a>
+<header class="bg-[#0e0e10] shadow-md border-b border-[#1f1f23] text-gray-300 relative">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center">
+    
+    <!-- Logo -->
+    <img 
+    src="/img/new-logo.png" 
+    alt="Logo" 
+    class="h-12 sm:h-14 md:h-16 lg:h-20 hover:scale-105 transition-transform duration-300"
+  />
   
-      <nav>
-        <ul class="flex space-x-6 text-base">
-          <li><a href="/" class="hover:text-purple-500 transition-colors duration-300">Início</a></li>
-          <li><a href="/sobre" class="hover:text-purple-500 transition-colors duration-300">Sobre</a></li>
-          <li><a href="/curriculo" class="hover:text-purple-500 transition-colors duration-300">Currículo</a></li>
-          <li><a href="/projetos" class="hover:text-purple-500 transition-colors duration-300">Projetos</a></li>
-          <li><a href="/contato" class="hover:text-purple-500 transition-colors duration-300">Contato</a></li>
-        </ul>
-      </nav>
-  
+
+    <!-- Menu desktop -->
+    <nav class="hidden lg:flex ml-auto space-x-6 text-base">
+      <a href="/" class="hover:text-purple-500 transition-colors duration-300">Início</a>
+      <a href="/sobre" class="hover:text-purple-500 transition-colors duration-300">Sobre</a>
+      <a href="/curriculo" class="hover:text-purple-500 transition-colors duration-300">Currículo</a>
+      <a href="/projetos" class="hover:text-purple-500 transition-colors duration-300">Projetos</a>
+      <a href="/contato" class="hover:text-purple-500 transition-colors duration-300">Contato</a>
+    </nav>
+
+    <!-- Ícone menu mobile (alinhado à direita) -->
+    <div id="menu-icon" class="lg:hidden ml-auto cursor-pointer text-2xl">
+      <i class="fas fa-bars text-gray-300"></i>
     </div>
-  </header>
-  
+  </div>
+
+  <!-- Menu mobile -->
+  <div id="nav-links" class="lg:hidden hidden flex-col space-y-4 text-center px-4 pb-6">
+    <a href="/" class="block hover:text-purple-500 transition-colors duration-300">Início</a>
+    <a href="/sobre" class="block hover:text-purple-500 transition-colors duration-300">Sobre</a>
+    <a href="/curriculo" class="block hover:text-purple-500 transition-colors duration-300">Currículo</a>
+    <a href="/projetos" class="block hover:text-purple-500 transition-colors duration-300">Projetos</a>
+    <a href="/contato" class="block hover:text-purple-500 transition-colors duration-300">Contato</a>
+  </div>
+</header>
+
+
+  <script>
+    // Seleciona o ícone de menu e a lista de links
+    const menuIcon = document.getElementById('menu-icon');
+    const navLinks = document.getElementById('nav-links');
+
+    // Adiciona um evento de clique ao ícone de menu
+    menuIcon.addEventListener('click', () => {
+      // Alterna a visibilidade do menu
+      navLinks.classList.toggle('hidden');
+    });
+  </script>
+</header>
