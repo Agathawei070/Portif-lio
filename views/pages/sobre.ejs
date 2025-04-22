@@ -1,28 +1,4 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title><%= typeof titulo !== 'undefined' ? titulo : 'Sobre - Agatha' %></title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    .clip-diagonal {
-      clip-path: polygon(0 0, 100% 100%, 100% 100%, 0% 100%);
-    }
-    .clip-diagonal-invertido {
-      clip-path: polygon(0 100%, 100% 0, 100% 0, 0% 0);
-    }
-  </style>
-</head>
-<body class="min-h-screen flex flex-col bg-[#0e0e10] text-gray-300">
-
-  <!-- Header -->
-  <%- include('../partials/header') %>
-
-  <!-- Conteúdo principal -->
-  <main class="flex-1 bg-gradient-to-br from-[#0e0e10] via-[#1f1f23] to-[#0e0e10] text-white font-sans pt-16 pb-96">
+<%- include('../partials/header') %>
 
     <!-- Introdução -->
     <section class="w-full py-20 px-8">
@@ -155,10 +131,4 @@
   <!-- Separador angular -->
   <div class="w-full h-16 bg-gradient-to-r from-[#1f1f23] to-[#0e0e10] clip-diagonal shadow-lg"></div>
 
-    
-  </main>
-
-  <!-- Footer -->
-  <%- include('../partials/footer') %>
-</body>
-</html>
+<%- include('../partials/footer') %>

@@ -1,24 +1,4 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title><%= typeof titulo !== 'undefined' ? titulo : 'Meu Portfólio' %></title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    .clip-diagonal {
-      clip-path: polygon(0 0, 100% 100%, 100% 100%, 0% 100%);
-    }
-    .clip-diagonal-invertido {
-      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
-    }
-  </style>
-</head>
-<body class="min-h-screen flex flex-col bg-[#0e0e10] text-gray-300">
-
-  <%- include('../partials/header') %>
-
-  <main class="flex-grow bg-gradient-to-br from-[#0e0e10] via-[#1f1f23] to-[#0e0e10] text-white font-sans pt-16 pb-96 px-6">
+<%- include('../partials/header') %>
 
     <section class="min-h-screen text-gray-300 px-6 py-16 flex items-center justify-center">
       <div class="max-w-3xl w-full">
@@ -65,9 +45,6 @@
       </div>
     </section>
 
-  </main>
 
-  <%- include("../partials/footer") %>
+<%- include("../partials/footer") %>
 
-</body>
-</html>

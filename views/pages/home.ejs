@@ -1,22 +1,4 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title><%= typeof titulo !== 'undefined' ? titulo : 'Meu Portfólio' %></title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    .clip-diagonal {
-      clip-path: polygon(0 0, 100% 100%, 100% 100%, 0% 100%);
-    }
-  </style>
-</head>
-<body class="min-h-screen flex flex-col bg-[#0e0e10] text-gray-300">
-
   <%- include('../partials/header') %>
-
-  <main class="bg-gradient-to-br from-[#0e0e10] via-[#1f1f23] to-[#0e0e10] text-white font-sans">
 
     <!-- Introdução -->
     <section class="w-full py-20 px-8">
@@ -157,14 +139,38 @@
       <div class="max-w-5xl mx-auto">
         <h2 class="text-4xl font-semibold mb-6 text-purple-500">Projetos</h2>
         <div class="grid md:grid-cols-2 gap-8">
+
           <div class="bg-[#1f1f23] p-6 rounded-xl shadow-xl hover:scale-105 transition-transform duration-300">
-            <h3 class="text-xl font-bold text-cyan-300">Projeto EcoTech</h3>
+            <h3 class="text-xl font-bold text-cyan-300">EcoTech</h3>
             <p class="text-gray-300 mt-2">Aplicativo para monitoramento e otimização do consumo de energia. Utiliza React Native e Firebase.</p>
           </div>
+
           <div class="bg-[#1f1f23] p-6 rounded-xl shadow-xl hover:scale-105 transition-transform duration-300">
-            <h3 class="text-xl font-bold text-cyan-300">Dashboard de Exportações</h3>
-            <p class="text-gray-300 mt-2">Plataforma web com gráficos de desempenho de estados brasileiros no comércio exterior. Desenvolvido com Next.js e Tailwind.</p>
+            <h3 class="text-xl font-bold text-cyan-300">Insight Flow</h3>
+            <p class="text-gray-300 mt-2">Plataforma web com gráficos de desempenho de estados brasileiros no comércio exterior.</p>
           </div>
+
+          <div class="bg-[#1f1f23] p-6 rounded-xl shadow-xl hover:scale-105 transition-transform duration-300">
+            <h3 class="text-xl font-bold text-cyan-300">Mestre Agil</h3>
+            <p class="text-gray-300 mt-2">Plataforma educacional interativa e didática que facilite o aprendizado e a implementação da metodologia SCRUM.</p>
+          </div>
+
+
+          <div class="bg-[#1f1f23] p-6 rounded-xl shadow-xl hover:scale-105 transition-transform duration-300">
+            <h3 class="text-xl font-bold text-cyan-300">Id Scan</h3>
+            <p class="text-gray-300 mt-2">Aplicativo de processamento de imagens de documentos de identidade.</p>
+          </div>
+
+          <div class="bg-[#1f1f23] p-6 rounded-xl shadow-xl hover:scale-105 transition-transform duration-300">
+            <h3 class="text-xl font-bold text-cyan-300">Total Tech</h3>
+            <p class="text-gray-300 mt-2">E-commerce de aparelhos eletronicos.</p>
+          </div>
+
+          <div class="bg-[#1f1f23] p-6 rounded-xl shadow-xl hover:scale-105 transition-transform duration-300">
+            <h3 class="text-xl font-bold text-cyan-300">Alissa Beauty</h3>
+            <p class="text-gray-300 mt-2">Plataforma de Venda e aplicação de cursos da área de estética.</p>
+          </div>
+
         </div>
       </div>
     </section>
@@ -184,6 +190,9 @@
           <span class="bg-[#0e0e10] p-3 rounded-lg text-center">JavaScript</span>
           <span class="bg-[#0e0e10] p-3 rounded-lg text-center">React</span>
           <span class="bg-[#0e0e10] p-3 rounded-lg text-center">Python</span>
+          <span class="bg-[#0e0e10] p-3 rounded-lg text-center">Java</span>
+          <span class="bg-[#0e0e10] p-3 rounded-lg text-center">HTML</span>
+          <span class="bg-[#0e0e10] p-3 rounded-lg text-center">CSS</span>
           <span class="bg-[#0e0e10] p-3 rounded-lg text-center">Comunicação</span>
           <span class="bg-[#0e0e10] p-3 rounded-lg text-center">Proatividade</span>
           <span class="bg-[#0e0e10] p-3 rounded-lg text-center">Trabalho em equipe</span>
@@ -200,8 +209,7 @@
         <h2 class="text-4xl font-semibold mb-6 text-purple-500">Trabalhos e Publicações</h2>
         <ul class="list-disc list-inside space-y-3">
           <li>TCC: Análise de Eficiência Energética com Machine Learning</li>
-          <li>Artigo: Visualização de Dados para Tomada de Decisão em Políticas Públicas</li>
-          <li>Relatório: Avaliação de Sistemas Web com Critérios de Usabilidade</li>
+          <li>TCC: Desenvolvimento de um E-commerce</li>
         </ul>
       </div>
     </section>
@@ -233,6 +241,3 @@
     </section>
 
     <%- include('../partials/footer') %>
-  </main>
-</body>
-</html>

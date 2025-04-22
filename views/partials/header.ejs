@@ -1,3 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title><%= typeof titulo !== 'undefined' ? titulo : 'Meu Portfólio' %></title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .clip-diagonal {
+      clip-path: polygon(0 0, 100% 100%, 100% 100%, 0% 100%);
+    }
+    .clip-diagonal-invertido {
+      clip-path: polygon(0 100%, 100% 0, 100% 0, 0% 0);
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col bg-[#0e0e10] text-gray-300">
+
 <header class="bg-[#0e0e10] shadow-md border-b border-[#1f1f23] text-gray-300 relative">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center">
     
@@ -14,6 +33,7 @@
       <a href="/" class="hover:text-purple-500 transition-colors duration-300">Início</a>
       <a href="/sobre" class="hover:text-purple-500 transition-colors duration-300">Sobre</a>
       <a href="/curriculo" class="hover:text-purple-500 transition-colors duration-300">Currículo</a>
+      <a href="/certificacoes" class="hover:text-purple-500 transition-colors duration-300">Certificações</a>
       <a href="/projetos" class="hover:text-purple-500 transition-colors duration-300">Projetos</a>
       <a href="/contato" class="hover:text-purple-500 transition-colors duration-300">Contato</a>
     </nav>
@@ -29,6 +49,7 @@
     <a href="/" class="block hover:text-purple-500 transition-colors duration-300">Início</a>
     <a href="/sobre" class="block hover:text-purple-500 transition-colors duration-300">Sobre</a>
     <a href="/curriculo" class="block hover:text-purple-500 transition-colors duration-300">Currículo</a>
+    <a href="/certificacoes" class="block hover:text-purple-500 transition-colors duration-300">Certificações</a>
     <a href="/projetos" class="block hover:text-purple-500 transition-colors duration-300">Projetos</a>
     <a href="/contato" class="block hover:text-purple-500 transition-colors duration-300">Contato</a>
   </div>
@@ -46,4 +67,6 @@
       navLinks.classList.toggle('hidden');
     });
   </script>
-</header>
+
+
+<main class="bg-gradient-to-br from-[#0e0e10] via-[#1f1f23] to-[#0e0e10] text-white font-sans">

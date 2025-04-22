@@ -23,5 +23,8 @@ router.get('/curriculo', (req, res) => {
   res.render('pages/curriculo');
 });
 
+router.get('/certificacoes', (req, res) => {
+  res.render('certificacoes');
+});
 
 module.exports = router;
